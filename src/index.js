@@ -6,9 +6,9 @@ const app = express();
 //tell browser to use as static resources
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
    
-    res.send(renderer())
+    res.send(renderer(req))
 
 })
 
